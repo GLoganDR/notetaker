@@ -13,6 +13,7 @@
         .state('notes.list',   {url:'?tag&page', templateUrl:'/views/notes/notes_list.html',   controller:'NotesListCtrl'})
         .state('notes.detail', {url:'/{noteId}', templateUrl:'/views/notes/notes_detail.html', controller:'NotesDetailCtrl'});
       }])
+    // Need Clarification on these following lines. //
     .run(['$rootScope', '$http', function($rootScope, $http){
       $http.get('/status').then(function(response){
         $rootScope.rootuser = response.data;
